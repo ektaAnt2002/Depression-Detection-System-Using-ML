@@ -7,9 +7,3 @@ professionals like psychologists and psychiatrists to assess their patients. The
 system may provide recommendations, such as seeking professional help, based
 on the results of the assessment.
 
-After initializing the project in VS Code...
-New Terminal- cd emotionDetactor
-next line- python manage.py runserver
-Follow this link http://127.0.0.1:8000/
-http://127.0.0.1:8000/home/login/
-In face detection press "q" once face is detected(sad, happy,....)
