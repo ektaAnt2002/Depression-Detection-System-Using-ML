@@ -1,0 +1,167 @@
+{% extends 'component.html' %}
+{% load static %}
+{% block body %}
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
+            <h1>Quiz Test</h1>
+        </div>
+        <div class="alert alert-primary" role="alert">
+            <ul>
+                <li>Please answer each question truthfully; there are no right or wrong responses. The goal is to
+                    understand your feelings accurately.</li>
+                <li>Consider your thoughts, feelings, and behaviors over the past few weeks when responding. This will
+                    provide a more accurate representation of your mental well-being.</li>
+                <li>Take your time; there's no rush to complete the quiz. Thoughtful responses are essential for
+                    meaningful results.</li>
+                <li>If your results indicate a concern or if you have mental health worries, consider reaching out to a
+                    healthcare professional. The quiz is a screening tool, not a diagnostic assessment.</li>
+            </ul>
+        </div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Little intrest or pleasure in doing things.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Feeling down, depressed or hopeless</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Trouble falling or staying asleep, or sleeping too much.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Feeling tired or having little energy.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Poor appetite or overeating.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Feeling bad about yourself - or that you are a failure or have let yourself or your family
+                                down.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Trouble concentrating on things, such as reading the newspaper or watshing television.</b>
+                        </p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Moving or sleeping so slowly that other people could have noticed.</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>Thoughts that you would be better off dead os of hurting yourself.</b>
+                        </p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="form-floating">
+                        <!-- <textarea class="form-control" placeholder="Leave a message here" id="message"
+                            style="height: 100%"></textarea> -->
+                        <p><b>If you've had any days with issues above how difficult have these problems made if for you
+                                at work,home,school or with other people ?</b></p>
+                        <input type="radio"> Not at all. <br>
+                        <input type="radio"> Several days.<br>
+                        <input type="radio"> More than half the days<br>
+                        <input type="radio"> Nearly every day
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 my-2">
+                <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <button class="btn btn-primary  w-100 py-2" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- Team End -->
+
+
+{% endblock %}

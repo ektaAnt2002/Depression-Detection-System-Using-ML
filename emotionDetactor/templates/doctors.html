@@ -1,0 +1,51 @@
+{% extends 'component.html' %}
+{% load static %}
+{% block body %}
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
+            <h1>Our Experienced Doctors</h1>
+        </div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        <div class="row g-4">
+            {% if doctor_list%}
+            {% for doc in doctor_list %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item position-relative rounded overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="/media/{{ doc.profile_image }}" alt="">
+                    </div>
+                    <div class="team-text bg-light text-center p-4">
+                        <h5>Dr. {{ doc.user.first_name }} {{ doc.user.last_name }}</h5>
+                        <div class="team-social text-center">
+                            <a target="_blank" class="btn btn-primary"
+                                href="/home/doctors/book/appointment/{{ doc.user.username }}">Book Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="text-center">
+                    No records Found
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+
+{% endblock %}
